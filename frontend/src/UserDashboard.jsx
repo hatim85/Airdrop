@@ -23,7 +23,6 @@ const UserDashboard = () => {
       setBalance(ethers.utils.formatUnits(userBalance, 18));
     } catch (error) {
       console.error(error);
-      toast.error("Error fetching balance!");
     } finally {
       setLoading(false);
     }

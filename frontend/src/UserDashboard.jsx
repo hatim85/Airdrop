@@ -26,7 +26,7 @@ const UserDashboard = () => {
 
   useEffect(()=>{
     fetchBalance();
-  },[balance])
+  },[])
 
   const handleWithdraw = async () => {
     setLoading(true);

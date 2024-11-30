@@ -43,7 +43,7 @@ function App() {
       const network = await provider.getNetwork();
       console.log("Current Network:", network.chainId);
       if (network.chainId !== parseInt(STAKING_NETWORK_ID, 16)) {
-        setNetworkError("Please switch to the Hardhat network.");
+        setNetworkError("Please switch to the Crossfi testnet.");
       } else {
         setNetworkError("");
       }

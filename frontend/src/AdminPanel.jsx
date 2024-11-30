@@ -52,7 +52,7 @@ const AdminPanel = () => {
       const tx = await contract.createBatch(ethers.utils.parseUnits(batchTokenAmount, 18));
       await tx.wait();
 
-      toast.success("Batch created successfully!");
+      console.log("Batch created successfully!");
     } catch (error) {
       console.error("Error creating batch:", error);
       toast.error("Failed to create batch.");

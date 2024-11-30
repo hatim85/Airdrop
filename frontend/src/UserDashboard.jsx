@@ -7,10 +7,6 @@ const UserDashboard = () => {
   const [balance, setBalance] = useState("0");
   const [loading, setLoading] = useState(false);
 
-  useEffect(()=>{
-    fetchBalance();
-  },[])
-
   const fetchBalance = async () => {
     setLoading(true);
     try {
@@ -27,6 +23,10 @@ const UserDashboard = () => {
       setLoading(false);
     }
   };
+
+  useEffect(()=>{
+    fetchBalance();
+  },[balance])
 
   const handleWithdraw = async () => {
     setLoading(true);
